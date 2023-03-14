@@ -1,0 +1,40 @@
+Vorbereitung
+Durak wird mit einem Deck aus 36 Karten (6–10, Bube, Dame, König, Ass) von zwei bis sechs Spielern gespielt. In dieser Implementierung
+gibt es nur zwei Spieler. Nach dem Mischen erhält jeder Spieler sechs Karten, eine weitere wird – zur guten Sichtbarkeit – offen über
+Kreuz unter das verbleibende Deck gelegt. Sie zeigt das Trumpfsymbol (z. B. „Herz“) an und gehört mit zum Deck, von dem im
+weiteren Verlauf des Spiels Karten gezogen werden.
+
+Spielverlauf
+Es wird rundenweise gespielt. Eine Runde beginnt mit dem Angriff des Angreifers auf den Gegenspieler, den
+Verteidiger. Kann der Verteidiger abwehren, ist die Runde vorbei und er startet mit seinem eigenen Angriff eine neue Runde. Muss der
+Verteidiger jedoch aufnehmen, darf er selbst nicht angreifen. Der jeweils nächste Spieler beginnt dann mit seinem Angriff.
+
+Spielbeginn
+Am Anfang hat jeder 6 Karten. Der Spieler mit dem niedrigsten Trumpf startet im ersten Spiel den ersten Angriff.
+
+Angriff
+Der Angriff beginnt durch das Offenlegen von Karten, die vom Verteidiger geschlagen werden müssen
+(größerer Wert sticht kleineren Wert, Trumpf sticht Nicht-Trumpf). Es können mehrere Karten sein, sofern sie die
+gleichen Werte haben.
+
+Verteidigung
+Der Verteidiger kann die ihm vorgelegten Karten mit Karten gleicher Farbe und höherem Wert schlagen. Dabei schlagen Karten mit der Trumpffarbe
+alle anderen Farben. Trümpfe können demnach nur von höheren Trümpfen geschlagen werden. Man deckt die zu schlagende Karte mit der
+schlagenden Karte. Dem Verteidiger können nur so viele Karten zum Schlagen vorgelegt werden, wie er auf der Hand hat.
+Die Verteidigung ist erfolgreich, wenn alle angreifenden Karten nach obigen Regeln geschlagen sind und der Gegenspieler keine
+weiteren dazugeben will oder kann. Die abgeschlagenen Karten scheiden aus dem Spiel aus, die Runde ist beendet. Kann der Verteidiger
+nicht alle Karten schlagen, weil er z. B. nicht die passenden Farben, zu geringe Werte oder zu wenige Trümpfe hat, endet die Runde, indem
+er alle in dieser Runde abgeschlagenen und noch offenen Karten aufnimmt. Falls die Karten nicht geschlagen werden können, dürfen die Angreifer
+weiter Karten von gleichem Wert hinterher werfen. Maximal jedoch so viele wie auch hätten abgeblockt werden können.
+Der Verteidiger hat auch die Möglichkeit, die Karten zu nehmen, auch wenn er schlagen könnte. Das wird manchmal gemacht,
+falls der Verteidiger keinen hohen Trumpf rauslegen möchte.
+
+Ende der Runde
+Am Ende einer Runde müssen alle Spieler Karten vom Deck ziehen, bis jeder wieder genau sechs auf der Hand hat. Der ursprüngliche Angreifer nimmt
+dabei zuerst auf, als letzter der Verteidiger. Dies ist strategisch relevant, da die letzte Karte zwangsläufig ein Trumpf ist und ein
+erfolgreiches Abschlagen gegen Ende die Wahrscheinlichkeit zum Ausscheiden erhöht. Ist das Deck aufgebraucht, wird ohne Nachziehen weitergespielt.
+Wer dann alle Karten losgeworden ist, scheidet erfolgreich aus dem Spiel aus.
+
+Spielende
+Das Spiel endet, wenn nur noch ein Spieler Karten auf der Hand hat. Dieser ist der Verlierer, der Durak, und muss neu mischen und austeilen sowie
+zunächst überbieten. Spielt bei der letzten Runde jeder Spieler alle verbleibenden Karten aus, gibt es ein Unentschieden.
